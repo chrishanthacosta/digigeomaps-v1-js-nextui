@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   selectedMap: "Area",
-  isAreaSideNavOpen: true,
+  isAreaSideNavOpen: false,
   isCompanySideNavOpen: true,
   isCommoditySideNavOpen: true,
   currentSearchString: "",

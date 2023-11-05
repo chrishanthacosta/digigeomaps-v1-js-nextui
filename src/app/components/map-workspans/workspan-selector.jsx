@@ -34,6 +34,7 @@ export const WorkspanSelector = () => {
   }, [selectedMapWorkspan]);
 
   useEffect(() => {
+    console.log("isSideNavOpen-init",isSideNavOpen)
     switch (mapType) {
       case "Area":
         dispatch(setIsAreaSideNavOpen(isSideNavOpen));

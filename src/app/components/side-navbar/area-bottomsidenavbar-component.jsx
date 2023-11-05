@@ -11,6 +11,11 @@ import { setIsAreaSideNavOpen } from "../../../store/map-selector/map-selector-s
 import { useRouter } from "next/navigation";
 
 const AreaBottomSideNavbar = () => {
+ const isAreaSideNavOpen = useSelector(
+    (state) => state.mapSelectorReducer.isAreaSideNavOpen
+  );
+  
+
   let pathname = "";
   const dispatch = useDispatch();
   const router = useRouter();
@@ -25,10 +30,8 @@ const AreaBottomSideNavbar = () => {
     }
   }
 
-  const isAreaSideNavOpen = useSelector(
-    (state) => state.mapSelectorReducer.isAreaSideNavOpen
-  );
-
+ 
+ console.log("isSideNavOpen2",isAreaSideNavOpen)
   const currentSearchString = useSelector(
     (state) => state.mapSelectorReducer.currentSearchString
   );
@@ -36,8 +39,10 @@ const AreaBottomSideNavbar = () => {
 
   useEffect(() => {
     // console.log("dsdsdfsd", isAreaSideNavOpen);
-    router.push(currentSearchString);
+    router.push(currentSearchString, undefined, { shallow: true });
   }, [currentSearchString]);
+ 
+
 
   // useEffect(() => {
   //   console.log("!isAreaSideNavOpen", isAreaSideNavOpen);
