@@ -49,7 +49,7 @@ export const WorkspanSelector = () => {
         break;
     }
     setActiveWorskpan(selectedMapWorkspan);
-  }, [isSideNavOpen]);
+  }, []);
 
   useEffect(() => {
     if (mapType) {

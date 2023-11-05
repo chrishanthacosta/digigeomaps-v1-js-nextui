@@ -35,13 +35,13 @@ const AreaBottomSideNavbar = () => {
   // const [isAreaSideNavOpen, setOpen] = useState(isAreaSideNavOpen);
 
   useEffect(() => {
-    console.log("dsdsdfsd", isAreaSideNavOpen);
+    // console.log("dsdsdfsd", isAreaSideNavOpen);
     router.push(currentSearchString);
   }, [currentSearchString]);
 
-  useEffect(() => {
-    console.log("!isAreaSideNavOpen", isAreaSideNavOpen);
-  }, [isAreaSideNavOpen]);
+  // useEffect(() => {
+  //   console.log("!isAreaSideNavOpen", isAreaSideNavOpen);
+  // }, [isAreaSideNavOpen]);
 
   const collapsibleBtnHandler = () => {
     // setOpen(!isAreaSideNavOpen);
